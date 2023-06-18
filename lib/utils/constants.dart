@@ -25,7 +25,7 @@ class AppConstants {
 
   static const _svg = _assets + "svg/";
   static const guySvg = _svg + "guy.svg";
-  static const personSvg = _svg + "person.svg";
+  static const personSvg = _svg + "person.JPG";
 
   static const _images = _assets + "images/";
 

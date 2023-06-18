@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:my_portfolio/models/technology.dart';
 import 'package:my_portfolio/provider/theme.dart';
@@ -157,10 +156,14 @@ class _AboutSectionState extends State<AboutSection> {
                 if (ScreenHelper.isDesktop(context) ||
                     ScreenHelper.isTablet(context))
                   Expanded(
-                    flex: constraints.maxWidth > 720.0 ? 1 : 0,
-                    child: SvgPicture.asset(
-                      AppConstants.personSvg,
-                      width: constraints.maxWidth > 720.0 ? null : 350.0,
+                    flex: constraints.maxWidth > 650.0 ? 1 : 0,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(300.0),
+                      child: Image.asset(
+                        AppConstants.personSvg,
+                        width: constraints.maxWidth > 400.0 ? null : 200.0,
+                        height: constraints.maxHeight > 100.0 ? null : 50.0,
+                      ),
                     ),
                   ),
               ],
